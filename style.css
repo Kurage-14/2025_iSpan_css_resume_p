@@ -1,0 +1,312 @@
+/* 全域 */
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Kaisei+Decol&family=M+PLUS+1p&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+    font-family: "Kaisei Decol", "M PLUS 1p", "Dosis", sans-serif;
+}
+
+body {
+    background-color: rgb(221, 238, 220);
+}
+
+/* === Header === */
+
+header {
+    background-color: #65A1A8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+.logo {
+    height: 100%;
+    font-size: 1.875rem;
+    /* font-family: "Dosis", sans-serif; */
+    color: aliceblue;
+    background-color: #65A1A8;
+    padding: 13px;
+}
+
+.menu-icon {
+    width: 62px;
+    height: 62px;
+    background-color: #B6E799;
+    border: 0.5rem solid #65A1A8;
+    border-radius: 1.3rem;
+    position: relative;
+}
+
+.menu-icon::after {
+    content: "";
+    width: 1.2rem;
+    height: 0.2rem;
+    border-top: 0.6rem double #65A1A8;
+    border-bottom: 0.2rem solid #65A1A8;
+    position: absolute;
+    top: calc((100% - 1rem) / 2);
+    left: calc((100% - 1.2rem) / 2);
+}
+
+.navbar {
+    width: 100%;
+    display: block;
+}
+
+.menu-list {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.menu-item {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #65A1A8;
+    display: flex;
+    align-items: stretch;
+}
+
+.menu {
+    width: 100%;
+    text-decoration: none;
+    /* font-family: "Dosis", sans-serif; */
+    font-size: 1.5rem;
+    color: #65A1A8;
+    padding: 10px 20px;
+    background-color: #DDEEDC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* === Banner === */
+
+#Banner {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slogan {
+    margin: auto 20px;
+    position: absolute;
+    z-index: 3;
+}
+
+.slogan h2 {
+    font-size: 2rem;
+}
+
+h2 {
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+h5 {
+    font-family: "M PLUS 1p", sans-serif;
+    font-weight: 300;
+}
+
+.circle1 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 15px solid #f89e59;
+    z-index: -1;
+    animation: move 10s ease-in infinite;
+}
+
+@keyframes move {
+    0% {
+        left: 70%;
+        top: -10%;
+    }
+
+    50% {
+        left: 60%;
+        top: 0%;
+    }
+
+    70% {
+        left: 60%;
+        top: -5%;
+    }
+
+    10% {
+        left: 70%;
+        top: -10%;
+    }
+}
+
+.circle2 {
+    position: absolute;
+    width: 180px;
+    height: 110px;
+    right: 1rem;
+    border-radius: 50%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border: 10px solid #75b6e2;
+    animation: move2 3.5s ease 0s infinite reverse both;
+}
+
+.circle2::after {
+    content: "";
+    height: 3.5rem;
+    width: 0.7rem;
+    border-left: 2rem double #75b6e2;
+    border-right: 2rem double #75b6e2;
+    position: absolute;
+    top: 6rem;
+    left: 2.5rem;
+}
+
+@keyframes move2 {
+    0% {
+        transform: scaleY(0.1);
+        /* transform: rotate(0); */
+        /* transform: rotate(30deg); */
+    }
+
+    50% {
+        transform: scaleY(1);
+        transform: scaleX(0.7);
+    }
+
+    100% {
+        transform: scaleY(0.1);
+        /* transform: rotate(60deg); */
+
+        /* transform: rotate(360); */
+
+    }
+}
+
+
+.shape {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 300px;
+    left: 30px;
+    float: left;
+    animation: squareToCircle 5s 1s infinite alternate;
+}
+
+@keyframes squareToCircle {
+    0% {
+        border-radius: 0 0 0 0;
+        background: coral;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        border-radius: 50% 0 0 0;
+        background: darksalmon;
+        transform: rotate(45deg);
+    }
+
+    50% {
+        border-radius: 50% 50% 0 0;
+        background: indianred;
+        transform: rotate(90deg);
+    }
+
+    75% {
+        border-radius: 50% 50% 50% 0;
+        background: lightcoral;
+        transform: rotate(135deg);
+    }
+
+    100% {
+        border-radius: 50% 50% 50% 50%;
+        background: darksalmon;
+        transform: rotate(180deg);
+    }
+}
+
+
+@media screen and (min-width:481px) {
+
+    /* 平板 */
+    /* === Header === */
+    header {
+        background-color: rgb(108, 185, 185);
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .navbar {
+        width: auto;
+        display: flex;
+        justify-content: end;
+    }
+
+    .menu-list {
+        width: auto;
+        flex-direction: row;
+        align-items: end;
+    }
+
+    .menu-item {
+        width: auto;
+        height: 62px;
+        border: 0;
+        justify-content: flex-end
+    }
+
+    .menu {
+        width: 140px;
+        background-color: rgb(108, 185, 185);
+        color: aliceblue;
+    }
+
+    /* === Banner === */
+
+    .triangle {
+        width: 0;
+        height: 0;
+        top: -25%;
+        left: -20%;
+        border-left: 257px solid transparent;
+        border-right: 257px solid transparent;
+        border-bottom: 405px solid rgb(71, 255, 215);
+        position: relative;
+        animation: spin 10s ease infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0);
+        }
+
+        100% {
+            transform: rotate(170deg);
+        }
+    }
+
+}
+
+@media screen and (min-width:835px) {
+    /* 電腦 */
+}
