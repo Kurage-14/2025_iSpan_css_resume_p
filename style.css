@@ -126,19 +126,16 @@ header {
     z-index: 3;
 }
 
-.slogan h2 {
-    font-size: 2rem;
-}
-
 h2 {
     padding: 10px 20px;
     font-weight: 500;
-    /* font-family: "Noto Serif TC", serif; */
+    font-size: 2rem;
 }
 
 h5 {
     font-family: 'HunInn', sans-serif;
     font-weight: 300;
+    padding: 0 20px;
 }
 
 .circle1 {
@@ -284,16 +281,15 @@ h5 {
 
 #About h2 {
     padding: 10px 0;
-    font-size: 2rem;
 }
 
-.profile,
 .education,
 .skills {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .profile {
+    margin-top: 10px;
     font-family: 'HunInn', sans-serif;
     font-size: 1rem;
     line-height: 1.75;
@@ -449,6 +445,51 @@ h4 {
     }
 }
 
+/* ===== Experience ===== */
+#Experience {
+    margin-top: 50px;
+    background-color: #f5f5f5;
+}
+
+#Experience h2 {
+    padding: 20px 0;
+}
+
+.experience-list li {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0;
+    padding: 0px 0 20px 0;
+    align-items: center;
+    align-content: baseline;
+    border-bottom: 1px solid #ddd;
+}
+
+.work-period {
+    width: 100%;
+    font-size: 1rem;
+    font-family: 'HunInn', sans-serif;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+}
+
+.company-logo img {
+    max-width: 100%;
+    border-radius: 100%;
+}
+
+.job-title {
+    font-family: 'HunInn', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+}
 
 @media screen and (min-width:481px) {
 
@@ -508,7 +549,7 @@ h4 {
     }
 
     /* ===== About ===== */
-    .container {
+    #About .container {
         flex-wrap: nowrap;
         justify-content: space-between;
         margin: 0 auto;
@@ -521,7 +562,7 @@ h4 {
 
     .description {
         width: 55%;
-        padding: 30px 0 30px 20px;
+        padding: 0 0 30px 20px;
         margin: 0;
     }
 
@@ -533,6 +574,15 @@ h4 {
     .skill-name {
         /* width: 80px; */
         margin-right: 30px;
+    }
+
+    /* ===== Experience ===== */
+    #Experience .container {
+        flex-direction: column;
+    }
+
+    .work-period {
+        width: 25%;
     }
 }
 
