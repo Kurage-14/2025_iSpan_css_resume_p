@@ -494,7 +494,6 @@ h4 {
 /* ===== Portfolio ===== */
 #Portfolio {
     text-align: center;
-    margin-top: 50px;
     /* display: flex;
     flex-wrap: wrap;
     justify-content: center; */
@@ -551,7 +550,7 @@ h4 {
     align-items: center;
     background-color: #c1a27a;
     font-size: 20px;
-    font-weight: bold;
+    /* font-weight: bold; */
     transform: rotateY(180deg);
     transition: transform 0.5s;
 }
@@ -656,6 +655,30 @@ h4 {
 
     .work-period {
         width: 25%;
+    }
+
+    /* ===== Portfolio ===== */
+    #Portfolio .container {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 120px 1fr 1fr 1fr;
+        grid-template-areas: 'h2 h2 h2 h2 h2';
+    }
+
+    #Portfolio h2 {
+        margin-bottom: 0;
+    }
+
+    .card:nth-child(4) {
+        grid-area: 2 / 3 / 3 / 5;
+    }
+
+    .card:nth-child(7) {
+        grid-area: 3/2/5/4;
+        height: 410px;
+    }
+
+    .card:nth-child(9) {
+        grid-area: 3/4/4/6;
     }
 }
 
