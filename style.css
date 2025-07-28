@@ -654,6 +654,19 @@ form button[type="submit"] {
     background-size: 200% auto;
 }
 
+footer {
+    background: #333;
+    padding: 20px;
+}
+
+footer p {
+    width: 80%;
+    margin: auto;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
 @media screen and (min-width:481px) {
 
     /* 平板 */
