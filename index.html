@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Resume</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -194,7 +195,42 @@
             </div>
         </div>
     </section>
-    <section id="Contact"></section>
+    <section id="Contact">
+        <div class="container">
+            <div class="col-6">
+                <h2>Contact Us</h2>
+                <p>如有任何問題或疑問，請隨時聯絡我們。</p>
+                <ul class="info">
+                    <li><i class="fas fa-map-marker-alt"></i>台北市信義區信義路五段7號</li>
+                    <li><i class="fas fa-phone"></i>02-1234-5678</li>
+                    <li><i class="fas fa-envelope"></i>example@mail.com</li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">電話</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">訊息</label>
+                        <textarea id="message" name="message" rows="8" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn-submit">確定送出</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
     <footer></footer>
 </body>
 
